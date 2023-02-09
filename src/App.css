@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+:root{
+    --text-primary:#000;
+    --bgPrimary:#fff;
+    --bgSecondary: #F9F9F9;
+    --bgNavbar: #051f1d;
+    --pink: #bd0097;
+    --light-pink: #fb4bfe;
+    --border: #d9d9d9;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a:hover{
+    color: var(--pink) !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app{
+    display: flex;
+    overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.menu {
+    background: var(--bgNavbar);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Navbar */
+
+.navbar{
+    flex: 0.2;
+    background-color: var(--bgNavbar);
+}
+
+.main{
+    flex: 0.8;
+    width: 100%;
+
+}
+.routes{
+    padding: 20px;
+}
+.nav{
+    position: fixed;
+    left: 0;
+    margin: 10px;
+    height: 100vh;
+    margin: 0px;
+    background-color: var(--bgNavbar);
+}
+
+.logo{
+    background-color: var(--bgNavbar);
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    width: 100%;
+}
+.logo__title{
+    margin:0 0 0 15px;
+}
+.logo a{
+   color: white;
 }
