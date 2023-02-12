@@ -12,7 +12,7 @@ const App = () => {
       <nav className="navbar">
         <Navbar />
       </nav>
-      <div className="main">
+      <main className="main">
         <Layout>
           <div className="routes">
             <Routes>
@@ -23,19 +23,19 @@ const App = () => {
               <Route exact path="/news" element={<News />} />
             </Routes>
           </div>
+          <footer className="footer">
+            <Title level={5} style={{ color: '#fff', textAlign: 'center' }}>
+              Cryptica <br />
+              All rights reserved
+            </Title>
+            <Space className="footer__links">
+              <Link to="/">Home</Link>
+              <Link to="/exchanges">Exchanges</Link>
+              <Link to="/news">News</Link>
+            </Space>
+          </footer>
         </Layout>
-        <div className="footer">
-          <Title level={5} style={{ color: '#fff', textAlign: 'center' }}>
-            Cryptica <br />
-            All rights reserved
-          </Title>
-          <Space>
-            <Link to="/">Home</Link>
-            <Link to="/exchanges">Exchanges</Link>
-            <Link to="/news">News</Link>
-          </Space>
-        </div>
-      </div>
+      </main>
     </div>
   );
 };

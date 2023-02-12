@@ -1,10 +1,9 @@
 :root{
-    --text-primary:#000;
-    --bgPrimary:#fff;
-    --bgSecondary: #F9F9F9;
-    --bgNavbar: #051f1d;
-    --pink: #bd0097;
-    --light-pink: #fb4bfe;
+    --text-primary:#ffffff;
+    --bgPrimary: #1d1d1d;
+    --bgSecondary: #6ACFC7;
+    --bgFooter: #171717;
+    --tealDarker: #219d93;
     --border: #d9d9d9;
 }
 
@@ -14,24 +13,31 @@
     box-sizing: border-box;
 }
 
+a{
+  color: var(--tealDarker) !important;
+}
+
 a:hover{
-    color: var(--pink) !important;
+    color: var(--bgSecondary) !important;
 }
 
 .app{
     display: flex;
     overflow: hidden;
+    
 }
 
 .menu {
-    background: var(--bgNavbar);
+  padding: 20px;
+  background: var(--bgPrimary);
 }
 
 /* Navbar */
 
 .navbar{
-    flex: 0.2;
-    background-color: var(--bgNavbar);
+  padding: 20px;
+  flex: 0.2;
+  background-color: var(--bgPrimary);
 }
 
 .main{
@@ -48,19 +54,296 @@ a:hover{
     margin: 10px;
     height: 100vh;
     margin: 0px;
-    background-color: var(--bgNavbar);
+    background-color: var(--bgPrimary);
 }
 
 .logo{
-    background-color: var(--bgNavbar);
+    background-color: var(--bgPrimary);
+    justify-content: space-between;
     display: flex;
-    padding: 20px;
+    padding: 20px 40px;
     align-items: center;
     width: 100%;
 }
-.logo__title{
-    margin:0 0 0 15px;
+
+.logo__title {
+  margin: 15px 20px;
+  display:table-cell;
+  vertical-align:middle;
 }
-.logo a{
-   color: white;
+
+.footer__links a{
+   color: tealDarker;
+}
+
+/* Homepage */
+
+.home__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.home__bottom-link {
+    margin-top: 0px !important; 
+}
+
+@media screen and (max-width: 500px) {
+    .heading {
+        margin-top: 20px;
+    }
+}
+
+/* CryptoCurrencies */
+
+.crypto__search, .news__search {
+  margin: 20px auto 30px auto;
+  width: 300px;
+}
+
+.crypto__input, .news__input {
+  padding: 15px 20px;
+  border: none;
+}
+
+.crypto__input::placeholder, .news__input::placeholder {
+  font-size: 16px;
+}
+
+.crypto__grid {
+    min-height: 65vh !important;
+}
+.crypto__card {
+    min-width: 250px;
+}
+.crypto__card .crypto__image {
+    width: 35px;    
+}
+
+/* Footer */
+
+.footer {
+    background-color: var(--bgFooter);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
+
+/* Cryptodetailss */
+
+
+.coin__details {
+    margin: 30px;
+  }
+  
+  .coin__heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 10px;
+  }
+  
+  .coin__heading .coin__title {
+    font-weight: 900;
+    color: var(--tealDarker);
+  }
+  
+  .coin__heading p {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .stats h2 {
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-top: 20px;
+    color: var(--tealDarker);
+  }
+  
+  .stats__title {
+    font-weight: 700 !important;
+    margin-top: 20px !important;
+    color: var(--tealDarker) !important;
+  }
+  
+  .coin__stats {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    font-size: 1rem;
+    opacity: 0.9;
+    padding: 20px;
+  }
+  
+  .coin__stats-info {
+    display: flex;
+    gap: 10px;
+    font-size: 1rem;
+  }
+  
+  .stats__value {
+    font-weight: 800;
+  }
+  
+  .stats__values p {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+  
+  .coin__desc-link {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    padding-top: 20px;
+  }
+  
+  .coin__desc-link h2 {
+    font-weight: 700;
+    color: var(--tealDarker);
+  }
+  
+  .coin__desc-link p {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+  
+  .coin__desc-link a {
+    color: var(--tealDarker);
+  }
+  
+  .coin__desc-link h3 {
+    font-weight: 700;
+  }
+  
+  .coin__desc {
+    flex: 0.5;
+  }
+  
+  .link__items {
+    padding: 0px 20px;
+    flex: 0.5;
+  }
+  
+  .link__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding: 20px;
+  }
+  
+  .link__title {
+    text-transform: capitalize;
+    font-size: 1rem;
+  }
+  
+  .link__item a {
+    color: var(--tealDarker);
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  
+  .link__item:hover,
+  .coin__stats:hover {
+    background-color: var(--bgSecondary);
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .stats {
+      flex-direction: column;
+    }
+    .coin__desc-link {
+      flex-direction: column;
+    }
+    .stats h2 {
+      margin-top: 0px;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .link__items {
+      padding: 0px;
+    }
+    .coin__details {
+      margin: 0;
+    }
+  }
+
+  .coin__select {
+    width: 200px !important;
+    margin-top: 20px !important;
+  }
+
+/* CryptoChart */
+
+.chart {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  color: #0071bd;
+}
+.chart__title {
+  color: #0071bd !important;
+}
+.price {
+  display: flex !important;
+  gap: 20px !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+}
+.price__change {
+  font-weight: 900 !important;
+}
+.price__current {
+  margin-top: 0px !important;
+  font-weight: 900 !important;
+}
+
+/* News */
+
+.news__select {
+  width: 180px;
+}
+.news__card {
+  min-height: 300px !important;
+  position: relative !important;
+}
+.news__content {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between !important;
+}
+.news__title {
+  font-size: 32px !important;
+}
+.news__card p {
+  color: black;
+  margin: 10px 0px !important;
+}
+.news__date {
+  position: absolute !important;
+  right: 10px !important;
+  bottom: 10px !important;
+  font-size: 24px !important;
+}
+
+.grid__box {
+  border-radius: 20px;
+  background-color: #eaeaea;
+  padding: 20px;
+  border: none;
 }

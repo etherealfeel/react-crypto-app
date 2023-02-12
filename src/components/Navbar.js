@@ -2,8 +2,9 @@ import React from 'react';
 import { Button, Menu, Typography, Avatar } from 'antd';
 import { Link } from 'react-router-dom';
 import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons';
-import icon from '../images/cryptocurrency.png';
+import icon from '../images/bitcoin-btc-logo.png';
 
+const { Item } = Menu;
 const { Title } = Typography;
 const Navbar = () => {
   return (
@@ -14,20 +15,19 @@ const Navbar = () => {
           <Link to="/">Cryptica</Link>
         </Title>
       </div>
-      <Menu className ="menu" theme="dark">
-        <Menu.Item icon={<HomeOutlined/>}>
+      <Menu className="menu" theme="dark" >  
+        <Item icon={<HomeOutlined />}>
           <Link to="/">Home</Link>
-        </Menu.Item>
-        <Menu.Item icon={<FundOutlined/>}>
+        </Item>
+        <Item icon={<FundOutlined />}>
           <Link to="/cryptocurrencies">Cryptocurrencies</Link>
-        </Menu.Item>
-        <Menu.Item icon={<MoneyCollectOutlined/>}>
+        </Item>
+        <Item icon={<MoneyCollectOutlined />}>
           <Link to="/exchanges">Exchanges</Link>
-        </Menu.Item>
-        <Menu.Item icon={<BulbOutlined/>}>
+        </Item>
+        <Item icon={<BulbOutlined />}>
           <Link to="/news">News</Link>
-        </Menu.Item>
-
+        </Item>
       </Menu>
     </div>
   );
