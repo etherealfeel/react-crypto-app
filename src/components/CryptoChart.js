@@ -14,16 +14,17 @@ const CryptoChart = ({ coinHistory, currentPrice, coinName }) => {
   }
 
   for (let i = 0; i < coinHistory?.data?.history?.length; i += 1) {
-    coinTimestamp.push(new Date(coinHistory?.data?.history[i].timestamp).toLocaleDateString());
+    coinTimestamp.push(new Date(coinHistory?.data?.history[i].timestamp*1000).toLocaleDateString());
   }
+
   const data = {
     labels: coinTimestamp,
     datasets: [
       {
         label: 'Price In USD',
-        data: coinPrice, 
+        data: coinPrice,
         fill: false,
-        backgroundColor: '#eaeaea',
+        backgroundColor: 'teal',
         borderColor: '#000',
       },
     ],
@@ -48,14 +49,14 @@ const CryptoChart = ({ coinHistory, currentPrice, coinName }) => {
         </Title>
         <Col className="price">
           <Title level={5} className="price__change">
-            {coinHistory?.data?.change}
+            {coinHistory?.data?.change}%
           </Title>
           <Title level={5} className="price__current">
             Current {coinName} Price: ${currentPrice}
           </Title>
         </Col>
       </Row>
-      <Line data={data} options={options} />
+      <Line className="chart__line" data={data} options={options} />
     </>
   );
 };
