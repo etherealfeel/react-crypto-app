@@ -89,7 +89,7 @@ a:hover{
     }
 }
 
-/* CryptoCurrencies */
+/* Cryptocurrencies && CryptoDetails*/
 
 .crypto__search, .news__search {
   margin: 20px auto 30px auto;
@@ -113,7 +113,6 @@ a:hover{
   border: none;
 }
 
-
 .crypto__input::placeholder, .news__input::placeholder {
   font-size: 16px;
 }
@@ -128,172 +127,159 @@ a:hover{
     width: 35px;    
 }
 
-/* Footer */
-
-.footer {
-    background-color: var(--bgFooter);
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    align-items: center;
-}
-
-/* Cryptodetailss */
-
-
 .coin__details {
     margin: 30px;
   }
   
-  .coin__heading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-bottom: 1px solid var(--border);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    gap: 10px;
-  }
+.coin__heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 10px;
+}
   
-  .coin__heading .coin__title {
-    font-weight: 900;
-    color: var(--tealDarker);
-  }
+.coin__heading .coin__title {
+  font-weight: 900;
+  color: var(--tealDarker);
+}
   
-  .coin__heading p {
-    font-size: 1rem;
-    opacity: 0.9;
-    margin-bottom: 20px;
-  }
-  
-  .stats {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 40px;
-  }
-  
-  .stats h2 {
-    font-weight: 700;
-    font-size: 1.4rem;
-    margin-top: 20px;
-    color: var(--tealDarker);
-  }
-  
-  .stats__title {
-    font-weight: 700 !important;
-    margin-top: 20px !important;
-    color: var(--tealDarker) !important;
-  }
-  
-  .coin__stats {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--border);
-    font-size: 1rem;
-    opacity: 0.9;
-    padding: 20px;
-  }
-  
-  .coin__stats-info {
-    display: flex;
-    gap: 10px;
-    font-size: 1rem;
-  }
-  
-  .stats__value {
-    font-weight: 800;
-  }
-  
-  .stats__values p {
-    font-size: 1rem;
-    opacity: 0.9;
-  }
-  
-  .coin__desc-link {
-    display: flex;
-    gap: 40px;
-    margin-top: 40px;
-    padding-top: 20px;
-  }
-  
-  .coin__desc-link h2 {
-    font-weight: 700;
-    color: var(--tealDarker);
-  }
-  
-  .coin__desc-link p {
-    font-size: 1rem;
-    opacity: 0.9;
-  }
-  
-  .coin__desc-link a {
-    color: var(--tealDarker);
-  }
-  
-  .coin__desc-link h3 {
-    font-weight: 700;
-  }
-  
-  .coin__desc {
-    flex: 0.5;
-  }
-  
-  .coin__links {
-    padding: 0px 20px;
-    flex: 0.5;
-  }
-  
-  .links__item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--border);
-    padding: 20px;
-  }
-  
-  .link__title {
-    text-transform: capitalize;
-    font-size: 1rem;
-  }
-  
-  .link__item a {
-    color: var(--tealDarker);
-    font-weight: 700;
-    font-size: 1rem;
-  }
-  
-  .link__item:hover,
-  .coin__stats:hover {
-    background-color: var(--teal);
-  }
-  
-  @media screen and (max-width: 1000px) {
-    .stats {
-      flex-direction: column;
-    }
-    .coin__desc-link {
-      flex-direction: column;
-    }
-    .stats h2 {
-      margin-top: 0px;
-    }
-  }
-  
-  @media screen and (max-width: 500px) {
-    .link__items {
-      padding: 0px;
-    }
-    .coin__details {
-      margin: 0;
-    }
-  }
+.coin__heading p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
 
-  .coin__select {
-    width: 200px !important;
-    margin: 20px 0 !important;
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40px;
+}
+
+.stats h2 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  color: var(--tealDarker);
+}
+
+.stats__title {
+  font-weight: 700 !important;
+  margin-top: 20px !important;
+  color: var(--tealDarker) !important;
+}
+
+.coin__stats {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  font-size: 1rem;
+  opacity: 0.9;
+  padding: 20px;
+}
+
+.coin__stats-info {
+  display: flex;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.stats__value {
+  font-weight: 800;
+}
+
+.stats__values p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.coin__desc-link {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+.coin__desc-link h2 {
+  font-weight: 700;
+  color: var(--tealDarker);
+}
+
+.coin__desc-link p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.coin__desc-link a {
+  color: var(--tealDarker);
+}
+
+.coin__desc-link h3 {
+  font-weight: 700;
+}
+
+.coin__desc {
+  flex: 0.5;
+}
+
+.coin__links {
+  padding: 0px 20px;
+  flex: 0.5;
+}
+
+.links__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding: 20px;
+}
+
+.link__title {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.link__item a {
+  color: var(--tealDarker);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.link__item:hover,
+.coin__stats:hover {
+  background-color: var(--teal);
+}
+
+@media screen and (max-width: 1000px) {
+  .stats {
+    flex-direction: column;
   }
+  .coin__desc-link {
+    flex-direction: column;
+  }
+  .stats h2 {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .link__items {
+    padding: 0px;
+  }
+  .coin__details {
+    margin: 0;
+  }
+}
+
+.coin__select {
+  width: 200px !important;
+  margin: 20px 0 !important;
+}
 
 /* CryptoChart */
 
@@ -350,6 +336,43 @@ a:hover{
   right: 10px !important;
   bottom: 10px !important;
   font-size: 24px !important;
+}
+
+/* Markets */
+.market__title {
+  text-align: center;
+}
+
+.market_table {
+}
+
+.table__header {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.table__item {
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.table__item div {
+  font-size: 24px;
+}
+
+
+/* Footer */
+
+.footer {
+  background-color: var(--bgFooter);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
 }
 
 .box--borderless {
