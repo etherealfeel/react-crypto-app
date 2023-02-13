@@ -17,9 +17,9 @@ const Homepage = () => {
   return (
     <>
       <Title level={2} className="home__heading heading"> 
-        Global crypto stats
+        Global <span className="span--crypto">Crypto</span> Stats
       </Title>
-      <Row className="grid__box">
+      <Row className="box--borderless">
         <Col span={12}>
           <Statistic title="Total Cryptocurrencies" value={globalStats.total} />
         </Col>
@@ -38,7 +38,7 @@ const Homepage = () => {
       </Row>
       <div className="home__bottom">
         <Title level={2} className="home__bottom-title">
-          Top 10 Cryptocurrencies
+          Top <span className="span--crypto">Crypto</span>currencies
         </Title>
         <Title level={3} className="home__bottom-link">
           <Link to="/cryptocurrencies">Show more</Link>
@@ -47,7 +47,7 @@ const Homepage = () => {
       <Cryptocurrencies simplified/>
       <div className="home__bottom">
         <Title level={2} className="home__bottom-title">
-          Latest Crypto News
+          Top <span className="span--crypto">Crypto</span> News
         </Title>
         <Title level={3} className="home__bottom-link">
           <Link to="/news">Show more</Link>

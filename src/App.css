@@ -1,8 +1,8 @@
 :root{
-    --text-primary:#ffffff;
+    --textPrimary:#ffffff;
     --bgPrimary: #1d1d1d;
-    --bgSecondary: #6ACFC7;
     --bgFooter: #171717;
+    --teal: #6ACFC7;
     --tealDarker: #219d93;
     --border: #d9d9d9;
 }
@@ -18,24 +18,21 @@ a{
 }
 
 a:hover{
-    color: var(--bgSecondary) !important;
+    color: var(--teal) !important;
 }
 
 .app{
     display: flex;
     overflow: hidden;
-    
 }
 
 .menu {
-  padding: 20px;
   background: var(--bgPrimary);
 }
 
 /* Navbar */
 
 .navbar{
-  padding: 20px;
   flex: 0.2;
   background-color: var(--bgPrimary);
 }
@@ -51,23 +48,20 @@ a:hover{
 .nav{
     position: fixed;
     left: 0;
-    margin: 10px;
     height: 100vh;
-    margin: 0px;
     background-color: var(--bgPrimary);
 }
 
 .logo{
+    margin: 5px 15px;
     background-color: var(--bgPrimary);
-    justify-content: space-between;
     display: flex;
-    padding: 20px 40px;
+    justify-content: flex-start;
     align-items: center;
-    width: 100%;
 }
 
 .logo__title {
-  margin: 15px 20px;
+  margin: 15px 5px;
   display:table-cell;
   vertical-align:middle;
 }
@@ -100,12 +94,25 @@ a:hover{
 .crypto__search, .news__search {
   margin: 20px auto 30px auto;
   width: 300px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search__icon {
+  position: absolute;
+  top:50%;
+  left:30px;
+  transform: translateY(-50%);
+  padding: 4px;
+  z-index: 10;
 }
 
 .crypto__input, .news__input {
-  padding: 15px 20px;
+  padding: 15px 20px 15px 40px;
   border: none;
 }
+
 
 .crypto__input::placeholder, .news__input::placeholder {
   font-size: 16px;
@@ -259,7 +266,7 @@ a:hover{
   
   .link__item:hover,
   .coin__stats:hover {
-    background-color: var(--bgSecondary);
+    background-color: var(--teal);
   }
   
   @media screen and (max-width: 1000px) {
@@ -341,9 +348,84 @@ a:hover{
   font-size: 24px !important;
 }
 
-.grid__box {
+.box--borderless {
   border-radius: 20px;
   background-color: #eaeaea;
-  padding: 20px;
+  padding: 15px;
   border: none;
+}
+
+.ant-menu-item-selected {
+  background-color: #131313 !important;
+}
+
+.span--crypto {
+  color: var(--teal);
+}
+
+.nav__btn{
+  display: none !important;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;   
+  position: absolute !important;
+  right: 10px !important;
+  top: 15px !important;
+  font-size: 1.2rem !important;
+  background-color: var(--bgFooter) !important;
+  border: 1px solid var(--teal) !important;
+}
+
+@media screen and (max-width:1300px){
+  .main{
+      margin-left: 50px;
+  }
+}
+
+@media screen and (max-width:1170px){
+  .main{
+      margin-left: 50px;
+  }
+}
+
+@media screen and (max-width:1000px){
+  .main{
+      margin-left: 100px;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .app{
+      flex-direction: column;
+      overflow: hidden;
+  }
+
+  .logo {
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .navbar{
+      flex: 1;
+  }
+
+  .main{
+      flex: 1;
+      margin-top: 90px;
+      margin-left: 0px;
+      margin-right: 10px;
+  }
+
+  .nav{
+      height: 8vh;
+      position:fixed;
+      width: 100%;
+      z-index: 100;
+      background-color: var(--bgSecondary);
+  }
+
+  .nav__btn{
+      display: flex !important;
+  }
 }

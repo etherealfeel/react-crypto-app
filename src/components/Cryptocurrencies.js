@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Row, Col, Input, Card } from 'antd';
 import millify from 'millify';
 import { useGetCryptosQuery } from '../services/cryptoApi';
+import { SearchOutlined } from '@ant-design/icons';
 
 const Cryptocurrencies = ({ simplified }) => {
   const count = simplified ? 12 : 100;
@@ -21,11 +22,12 @@ const Cryptocurrencies = ({ simplified }) => {
   return (
     <>
       {!simplified && (
-        <div className="crypto__search grid__box">
+        <div className="crypto__search box--borderless">
+          <SearchOutlined className="search__icon"/>
           <Input className="crypto__input" placeholder="Search Cryptocurrency..." onChange={(e) => setSearchTerm(e.target.value)} />
         </div>
       )}
-      <Row gutter={[16, 16]} className={`crypto__grid ${simplified ? "grid__box" : ""}`}>
+      <Row gutter={[16, 16]} className={`crypto__grid ${simplified ? "box--borderless" : ""}`}>
         {cryptos?.map((curr, i) => (
           <Col xs={24} sm={12} lg={6} className="crypto__card" key={i}>
             <Link to={`/crypto/${curr.uuid}`}>
