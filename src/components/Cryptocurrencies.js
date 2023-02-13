@@ -4,6 +4,7 @@ import { Row, Col, Input, Card } from 'antd';
 import millify from 'millify';
 import { useGetCryptosQuery } from '../services/cryptoApi';
 import { SearchOutlined } from '@ant-design/icons';
+import Loader from './Loader';
 
 const Cryptocurrencies = ({ simplified }) => {
   const count = simplified ? 12 : 100;
@@ -17,7 +18,7 @@ const Cryptocurrencies = ({ simplified }) => {
     setCryptos(filteredList);
   }, [cryptosList, searchTerm]);
 
-  if (isFetching) return 'Fetching data...';
+  if (isFetching) return <Loader/>;
 
   return (
     <>

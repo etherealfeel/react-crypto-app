@@ -3,6 +3,7 @@ import { Input, Typography, Row, Col, Card } from 'antd';
 import moment from 'moment';
 import { useGetNewsQuery } from '../services/cryptoNewsApi';
 import { SearchOutlined } from '@ant-design/icons';
+import Loader from './Loader';
 
 const { Text, Title } = Typography;
 
@@ -17,7 +18,7 @@ const News = ({ simplified }) => {
     setNews(filteredList);
   }, [newsList, searchTerm]);
 
-  if (!newsList) return 'Fetching data...';
+  if (!newsList) return <Loader/>;
 
   return (
     <>

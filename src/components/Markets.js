@@ -4,14 +4,14 @@ import { Row, Col, Typography } from 'antd';
 import HTMLReactParser from 'html-react-parser';
 
 import { useGetMarketsQuery } from '../services/cryptoMarketsApi';
+import Loader from './Loader';
 
 const { Title } = Typography;
 
 const Markets = () => {
   const { data: marketsList, isFetching } = useGetMarketsQuery();
 
-  if (isFetching) return 'Fetching data...';
-
+  if (isFetching) return <Loader/>;
   return (
     <div className="market">
       <Title className="market__title">
@@ -20,7 +20,7 @@ const Markets = () => {
       <div className="market__table box--borderless">
         <Row className="table__header">
           <Col span={6} className="table__header-item">
-            <Title className="table__title" level={3}>Name | Base</Title>
+            <Title className="table__title" level={3}>Market | Base</Title>
           </Col>
           <Col span={6} className="table__header-item">
             <Title className="table__title" level={3}>Price ($)</Title>

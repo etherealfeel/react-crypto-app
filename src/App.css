@@ -375,6 +375,13 @@ a:hover{
   align-items: center;
 }
 
+.loader{
+  height: 81vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .box--borderless {
   border-radius: 20px;
   background-color: #eaeaea;
